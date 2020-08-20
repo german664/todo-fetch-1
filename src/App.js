@@ -1,25 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Tasks from "./componentes/tasks";
+import Inputs from "./componentes/input";
 
 function App() {
+  const [tasks, setTasks] = useState([]);
+  const deleteTask = (index) => {
+    tasks.splice(index, 1);
+    setTasks([...tasks]);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="inputs">
+        <h2>TO DO LIST</h2>
+        <Inputs tasks={tasks} setTasks={setTasks} />
+        <ul>
+          {tasks.length > 0 ? (
+            <Tasks tasks={tasks} deleteTask={deleteTask} />
+          ) : (
+            <p>No hay tareas pendientes</p>
+          )}
+        </ul>
+        <div>
+          <p className="counter">{`Quedan ${tasks.length} tareas pendientes`}</p>
+        </div>
+      </div>
+    </>
   );
 }
 

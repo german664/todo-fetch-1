@@ -1,13 +1,63 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Lato", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(220, 255, 234);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.inputs {
+  height: auto;
+  width: 400px;
+  background: rgb(195, 255, 195);
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+  box-shadow: 1px 1px 5px 0.5px rgba(0, 0, 0, 0.562);
+  padding-top: 4px;
+}
+li {
+  text-align: left;
+  list-style: none;
+  border-bottom: 0.1px solid rgba(134, 134, 134, 0.534);
+  padding: 15px;
+  font-weight: 300;
+}
+.fa-trash-alt {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.counterContainer {
+  position: absolute;
+  height: 20%;
+  width: 100%;
+  bottom: 0px;
+}
+.counter {
+  text-align: left;
+  padding: 15px;
+  font-size: 70%;
+}
+ul {
+  padding: 0px;
+}
+li:first-of-type {
+  border-top: 0.1px solid rgba(134, 134, 134, 0.534);
+}
+li:hover {
+  background: rgb(153, 250, 153);
+  transition: 0.2s;
+}
+input {
+  outline-color: rgb(0, 167, 0);
+  padding: 5px;
+  border: none;
+  margin-bottom: 15px;
+  font-weight: 300;
 }
