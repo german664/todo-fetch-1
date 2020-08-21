@@ -61,3 +61,6 @@ input {
   margin-bottom: 15px;
   font-weight: 300;
 }
+.hide {
+  display: none;
+}

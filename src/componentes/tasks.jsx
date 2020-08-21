@@ -4,9 +4,10 @@ const Tasks = (props) => {
   return props.tasks.map((el, index) => {
     return (
       <li key={"key_" + index}>
-        {el}
+        {el.label}
+
         <i
-          className="far fa-trash-alt"
+          className={"far fa-trash-alt "}
           onClick={() => {
             props.deleteTask(index);
           }}

@@ -8,7 +8,7 @@ const Inputs = (props) => {
         let value = e.target.value;
         if (e.keyCode === 13 && value !== "") {
           props.setTasks((prevState) => {
-            return [...prevState, value];
+            return [...prevState, { label: value, done: false }];
           });
           e.target.value = "";
         }
